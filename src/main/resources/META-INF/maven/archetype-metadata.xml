@@ -8,7 +8,7 @@
          <defaultValue>Spring MVC Project</defaultValue>
       </requiredProperty>
       <requiredProperty key="projectDescription">
-         <defaultValue>A Spring MVC project using React+Redux for the views.</defaultValue>
+         <defaultValue>A Spring MVC project using Angular for the views.</defaultValue>
       </requiredProperty>
       <requiredProperty key="currentYear">
          <defaultValue>2020</defaultValue>

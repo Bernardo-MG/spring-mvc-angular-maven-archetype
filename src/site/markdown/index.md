@@ -1,13 +1,13 @@
-# An Archetype for React Web Projects
+# An Archetype for Angular Web Projects
 
 Archetypes act as templates for new Maven projects, taking care of the most tedious and repetitive tasks for the user, who can just begin coding a pre-configured project.
 
-In this case this Archetype creates a [Spring MVC][spring-mvc] application, using [React][react] + [Redux][redux] for the views. It also comes ready for a full development cycle using [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) for CI, [Github](https://github.com/) for SCM, and [Bintray](https://bintray.com/) as the code repository.
+In this case this Archetype creates a [Spring MVC][spring-mvc] application, using [Angular][angular] for the views. It also comes ready for a full development cycle using [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) for CI, [Github](https://github.com/) for SCM, and [Bintray](https://bintray.com/) as the code repository.
 
 ## Features
 
 - Creates the base for a [Spring MVC][spring-mvc] project.
-- [React][react] and [Redux][redux] for the backend.
+- [Angular][angular] for the frontend.
 - Using [Liquibase][liquibase] for database versioning.
 - [bernardomg's Base POM][base-pom] used as parent POM.
 - [Unit and integration test][tests] suites are run separatedly with the use of [JUnit][junit].
@@ -50,14 +50,13 @@ mvn spring-boot:run -P h2,development
 
 [base-pom]: https://github.com/Bernardo-MG/base-pom
 [docs-skin]: https://github.com/Bernardo-MG/docs-maven-skin
-[example-project]: https://github.com/Bernardo-MG/spring-mvc-react-archetype-example
+[example-project]: https://github.com/Bernardo-MG/spring-mvc-angular-archetype-example
 
 [liquibase]: http://www.liquibase.org/
 [spring-mvc]: https://spring.io/
 [junit]: http://junit.org
 
-[react]: https://reactjs.org/
-[redux]: https://redux.js.org/
+[angular]: https://angular.io/
 
 [license]: ./license.html
 

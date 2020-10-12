@@ -1,9 +1,9 @@
-# Spring MVC with React Maven Archetype
+# Spring MVC with Angular Maven Archetype
 
-A [Maven Archetype][maven-archetype] for generating a Spring MVC project using React + Redux for the frontend.
+A [Maven Archetype][maven-archetype] for generating a Spring MVC project using Angular for the frontend.
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven.archetypes/spring-mvc-react-archetype.svg)][maven-repo]
-[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/spring-mvc-react-maven-archetype/images/download.svg)][bintray-repo]
+[![Maven Central](https://img.shields.io/maven-central/v/com.bernardomg.maven.archetypes/spring-mvc-angular-archetype.svg)][maven-repo]
+[![Bintray](https://api.bintray.com/packages/bernardo-mg/maven/spring-mvc-angular-maven-archetype/images/download.svg)][bintray-repo]
 
 [![Release docs](https://img.shields.io/badge/docs-release-blue.svg)][site-release]
 [![Development docs](https://img.shields.io/badge/docs-develop-blue.svg)][site-develop]
@@ -11,7 +11,7 @@ A [Maven Archetype][maven-archetype] for generating a Spring MVC project using R
 ## Features
 
 - [Spring MVC][spring-mvc] for the backend.
-- [React][react] and [Redux][redux] for the backend.
+- [Angular][angular] for the frontend.
 - Initial sample project including working persistence and exception handling
 - Using [Liquibase][liquibase] for database versioning.
 - Fully configured POM, extending from [bernardomg's Base POM][base-pom], including features such as build validation, changes report or manifest configuration.
@@ -63,7 +63,7 @@ The Maven coordinates and URL for it are:
 
 ```
 Group ID: com.bernardomg.maven.archetypes
-Artifact ID: spring-mvc-react-maven-archetype
+Artifact ID: spring-mvc-angular-maven-archetype
 Version: (Check POM or badges)
 URL: https://dl.bintray.com/bernardo-mg/maven/
 ```
@@ -71,7 +71,7 @@ URL: https://dl.bintray.com/bernardo-mg/maven/
 For example, to use it through command line type the following:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=spring-mvc-react-maven-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
+mvn archetype:generate -DarchetypeGroupId=com.bernardomg.maven.archetypes -DarchetypeArtifactId=spring-mvc-angular-maven-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=https://dl.bintray.com/bernardo-mg/maven/
 ```
 
 If using an IDE check its documentation to find out how to use Maven Archetypes, and how to add these to the local repository.
@@ -100,18 +100,18 @@ If you wish to fork or modify the code, visit the [GitHub project page][scm], wh
 ## License
 The project has been released under the [MIT License][license].
 
-[bintray-repo]: https://bintray.com/bernardo-mg/maven/spring-mvc-react-maven-archetype/view
-[maven-repo]: https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/spring-mvc-react-archetype
+[bintray-repo]: https://bintray.com/bernardo-mg/maven/spring-mvc-angular-maven-archetype/view
+[maven-repo]: https://mvnrepository.com/artifact/com.bernardomg.maven.archetypes/spring-mvc-angular-archetype
 [junit]: https://junit.org
-[issues]: https://github.com/Bernardo-MG/spring-mvc-react-maven-archetype/issues
+[issues]: https://github.com/Bernardo-MG/spring-mvc-angular-maven-archetype/issues
 [license]: https://www.opensource.org/licenses/mit-license.php
-[scm]: https://github.com/Bernardo-MG/spring-mvc-react-maven-archetype
-[site-develop]: https://docs.bernardomg.com/development/maven/spring-mvc-react-maven-archetype
-[site-release]: https://docs.bernardomg.com/maven/spring-mvc-react-maven-archetype
+[scm]: https://github.com/Bernardo-MG/spring-mvc-angular-maven-archetype
+[site-develop]: https://docs.bernardomg.com/development/maven/spring-mvc-angular-maven-archetype
+[site-release]: https://docs.bernardomg.com/maven/spring-mvc-angular-maven-archetype
 
 [maven-archetype]: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
 
-[sample-project]: https://github.com/Bernardo-MG/spring-mvc-react-maven-archetype-example
+[sample-project]: https://github.com/Bernardo-MG/spring-mvc-angular-maven-archetype-example
 
 [spring-mvc]: https://spring.io/
 
@@ -124,8 +124,7 @@ The project has been released under the [MIT License][license].
 [bintray]: https://bintray.com/
 [github-workflow]: https://docs.github.com/en/actions/configuring-and-managing-workflows
 
-[react]: https://reactjs.org/
-[redux]: https://redux.js.org/
+[angular]: https://angular.io/
 
 [surefire]: https://maven.apache.org/surefire/maven-surefire-plugin/
 [failsafe]: https://maven.apache.org/surefire/maven-failsafe-plugin/
