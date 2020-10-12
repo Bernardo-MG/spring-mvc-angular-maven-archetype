@@ -179,6 +179,7 @@
          <includes>
             <include>.browserslistrc</include>
             <include>.editorconfig</include>
+            <include>karma.conf.js</include>
             <include>tsconfig.app.json</include>
             <include>tsconfig.base.json</include>
             <include>tsconfig.json</include>
