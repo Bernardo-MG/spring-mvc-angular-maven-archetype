@@ -57,8 +57,11 @@
          <directory>src/main/js</directory>
          <includes>
             <include>**/*.js</include>
-            <include>**/*.scss</include>
             <include>**/*.json</include>
+            <include>**/*.sass</include>
+            <include>**/*.ts</include>
+            <include>**/*.html</include>
+            <include>**/*.gitkeep</include>
          </includes>
       </fileSet>
       <fileSet filtered="false" encoding="UTF-8">
