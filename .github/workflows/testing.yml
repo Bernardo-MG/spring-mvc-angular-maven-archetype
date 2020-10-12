@@ -17,5 +17,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: ${{ matrix.jdk }}
+    - name: Update Chrome
+      run: sudo apt-get update
+      run: sudo apt-get upgrade google-chrome-stable -y
     - name: Run all tests
       run: mvn clean verify
