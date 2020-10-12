@@ -200,15 +200,7 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                           <arguments>run build</arguments>
-                           <environmentVariables>
-                              <API_ROOT>${node.env.appVersion}</API_ROOT>
-                              <APP_VERSION>${node.env.appVersion}</APP_VERSION>
-                              <REPO_URL>${node.env.repoUrl}</REPO_URL>
-                              <INPUT_PATH>${node.env.inputPath}</INPUT_PATH>
-                              <OUTPUT_PATH>${node.env.outputPath}</OUTPUT_PATH>
-                              <MODULE_PATH>${node.env.modules}</MODULE_PATH>
-                           </environmentVariables>
+                           <arguments>run build --prod</arguments>
                         </configuration>
                      </execution>
                   </executions>
@@ -237,15 +229,7 @@
                         </goals>
                         <phase>process-resources</phase>
                         <configuration>
-                           <arguments>run development</arguments>
-                           <environmentVariables>
-                              <API_ROOT>${node.env.appVersion}</API_ROOT>
-                              <APP_VERSION>${node.env.appVersion}</APP_VERSION>
-                              <REPO_URL>${node.env.repoUrl}</REPO_URL>
-                              <INPUT_PATH>${node.env.inputPath}</INPUT_PATH>
-                              <OUTPUT_PATH>${node.env.outputPath}</OUTPUT_PATH>
-                              <MODULE_PATH>${node.env.modules}</MODULE_PATH>
-                           </environmentVariables>
+                           <arguments>run build</arguments>
                         </configuration>
                      </execution>
                   </executions>
@@ -851,6 +835,8 @@
                      <sources>
                         <!-- JS sources -->
                         <source>${project.basedir}/src/main/js</source>
+                        <!-- JS tests -->
+                        <source>${project.basedir}/src/test/js</source>
                      </sources>
                   </configuration>
                </execution>
@@ -922,7 +908,18 @@
                   </goals>
                   <phase>test</phase>
                   <configuration>
-                     <arguments>test</arguments>
+                     <arguments>test -- --configuration=ci</arguments>
+                  </configuration>
+               </execution>
+               <execution>
+                  <!-- Runs the end to end tests -->
+                  <id>frontend-e2e-test</id>
+                  <goals>
+                     <goal>npm</goal>
+                  </goals>
+                  <phase>test</phase>
+                  <configuration>
+                     <arguments>run e2e -- --configuration=ci</arguments>
                   </configuration>
                </execution>
             </executions>
