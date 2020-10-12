@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dnd5-api-angular-client": {
+    "${artifactId}": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dnd5-api-angular-client:build"
+            "browserTarget": "${artifactId}:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dnd5-api-angular-client:build:production"
+              "browserTarget": "${artifactId}:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dnd5-api-angular-client:build"
+            "browserTarget": "${artifactId}:build"
           }
         },
         "test": {
@@ -98,7 +98,7 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dnd5-api-angular-client:serve:production"
+              "devServerTarget": "${artifactId}:serve:production"
             },
             "ci": {
               "watch": false,
@@ -124,14 +124,14 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "src/main/js/e2e/protractor.conf.js",
-            "devServerTarget": "dnd5-api-angular-client:serve"
+            "devServerTarget": "${artifactId}:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dnd5-api-angular-client:serve:production"
+              "devServerTarget": "${artifactId}:serve:production"
             },
             "ci": {
-              "devServerTarget": "dnd5-api-angular-client:serve:production",
+              "devServerTarget": "${artifactId}:serve:production",
               "protractorConfig": "src/main/js/e2e/protractor-ci.conf.js"
             }
           }
@@ -139,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "dnd5-api-angular-client"
+  "defaultProject": "${artifactId}"
 }

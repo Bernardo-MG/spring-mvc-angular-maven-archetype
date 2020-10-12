@@ -166,6 +166,7 @@
          <!-- Frontend project files -->
          <directory></directory>
          <includes>
+            <include>angular.json</include>
             <include>package.json</include>
          </includes>
       </fileSet>
@@ -173,10 +174,13 @@
          <!-- Frontend files -->
          <directory></directory>
          <includes>
-            <include>webpack.*.js</include>
-            <include>.babelrc</include>
-            <include>.eslintrc</include>
-            <include>.nvmrc</include>
+            <include>.browserslistrc</include>
+            <include>.editorconfig</include>
+            <include>tsconfig.app.json</include>
+            <include>tsconfig.base.json</include>
+            <include>tsconfig.json</include>
+            <include>tsconfig.spec.json</include>
+            <include>tslint.json</include>
          </includes>
       </fileSet>
    </fileSets>
