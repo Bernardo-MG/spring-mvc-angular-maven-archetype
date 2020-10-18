@@ -10,8 +10,8 @@
           "style": "sass"
         }
       },
-      "root": "",
-      "sourceRoot": "src/main/js",
+      "root": "src/main/js",
+      "sourceRoot": ".",
       "prefix": "app",
       "architect": {
         "build": {
