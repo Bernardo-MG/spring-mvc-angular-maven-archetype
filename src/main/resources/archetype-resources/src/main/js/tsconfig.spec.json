@@ -12,7 +12,7 @@
     "polyfills.ts"
   ],
   "include": [
-    "src/main/js/**/*.spec.ts",
-    "src/main/js/**/*.d.ts"
+    "**/*.spec.ts",
+    "**/*.d.ts"
   ]
 }
