@@ -21,7 +21,7 @@
             "index": "src/main/js/index.html",
             "main": "src/main/js/main.ts",
             "polyfills": "src/main/js/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "src/main/js/tsconfig.app.json",
             "aot": true,
             "assets": [
               "src/main/js/assets"
@@ -111,8 +111,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
+              "src/main/js/tsconfig.app.json",
+              "src/main/js/tsconfig.spec.json",
               "src/main/js/e2e/tsconfig.json"
             ],
             "exclude": [
