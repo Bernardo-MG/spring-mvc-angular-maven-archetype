@@ -2,22 +2,22 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { CharclassListComponent } from './charclass-list.component';
+import { DataListComponent } from './data-list.component';
 
-describe('CharclassComponent', () => {
-  let component: CharclassListComponent;
-  let fixture: ComponentFixture<CharclassListComponent>;
+describe('DataComponent', () => {
+  let component: DataListComponent;
+  let fixture: ComponentFixture<DataListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      declarations: [ CharclassListComponent ]
+      declarations: [ DataListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CharclassListComponent);
+    fixture = TestBed.createComponent(DataListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

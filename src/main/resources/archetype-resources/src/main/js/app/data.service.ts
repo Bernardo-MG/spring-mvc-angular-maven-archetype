@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Charclass } from './charclass';
+import { Data } from './data';
 import { ApiResponse } from './api-response';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -8,26 +8,21 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CharclassService {
+export class DataService {
 
-  private charclassesUrl = 'https://www.dnd5eapi.co/api/classes';  // URL to web api
+  private endpoint = 'http://localhost:8080/rest/entity';  // URL to web api
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getCharClasses(): Observable<Charclass[]> {
-    return this.http.get<ApiResponse<Charclass[]>>(this.charclassesUrl).pipe(
-      map((response: ApiResponse<Charclass[]>) => { return response.results }),
-      catchError(this.handleError<Charclass[]>('getCharClasses', []))
+  getData(): Observable<Data[]> {
+    return this.http.get<ApiResponse<Data[]>>(this.endpoint).pipe(
+      map((response: ApiResponse<Data[]>) => { return response.content.content }),
+      catchError(this.handleError<Data[]>('getData', []))
     ).pipe(
-      catchError(this.handleError<Charclass[]>('getCharClasses', []))
+      catchError(this.handleError<Data[]>('getData', []))
     );
-  }
-
-  getCharClass(id: string): Observable<Charclass> {
-    const url = `${this.charclassesUrl}/${id}`;
-    return this.http.get<Charclass>(url);
   }
 
   /**
