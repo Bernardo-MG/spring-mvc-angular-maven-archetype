@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { DataViewSearchComponent } from './data-view-search.component';
 
 describe('DataViewSearchComponent', () => {
@@ -8,6 +10,7 @@ describe('DataViewSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ DataViewSearchComponent ]
     })
     .compileComponents();
