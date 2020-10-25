@@ -16,8 +16,9 @@ export class DataService {
     private http: HttpClient
   ) { }
 
-  getData(): Observable<Data[]> {
-    return this.http.get<ApiResponse<Data[]>>(this.endpoint).pipe(
+  search(query: string): Observable<Data[]> {
+    const params = { query };
+    return this.http.get<ApiResponse<Data[]>>(this.endpoint, { params: params }).pipe(
       map((response: ApiResponse<Data[]>) => { return response.content.content }),
       catchError(this.handleError<Data[]>('getData', []))
     ).pipe(

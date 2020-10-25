@@ -7,10 +7,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 
 import { DataListComponent } from './data-list/data-list.component';
+import { DataViewSearchComponent } from './data-view-search/data-view-search.component';
+import { DataViewSearchFormComponent } from './data-view-search-form/data-view-search-form.component';
 
 @NgModule({
   declarations: [
-    DataListComponent
+    DataListComponent,
+    DataViewSearchComponent,
+    DataViewSearchFormComponent
   ],
   imports: [
     CommonModule,

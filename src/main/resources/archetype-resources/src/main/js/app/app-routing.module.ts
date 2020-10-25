@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DataListComponent } from './data-view/data-list/data-list.component';
+import { DataViewSearchComponent } from './data-view/data-view-search/data-view-search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/data', pathMatch: 'full' },
-  { path: 'data', component: DataListComponent }
+  { path: 'data', component: DataViewSearchComponent }
 ];
 
 @NgModule({
