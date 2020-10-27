@@ -3,7 +3,7 @@ import { Data } from './data';
 import { ApiResponse } from './api-response';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataForm } from './dataForm';
 
 @Injectable({
@@ -11,7 +11,9 @@ import { DataForm } from './dataForm';
 })
 export class DataService {
 
-  private endpoint = 'http://localhost:8080/rest/entity';  // URL to web api
+  private endpoint = 'http://localhost:8080/rest/entity';
+
+  private reportEndpoint = 'http://localhost:8080/rest/entity/pdf';
 
   constructor(
     private http: HttpClient
@@ -31,6 +33,21 @@ export class DataService {
     this.http.post<DataForm>(this.endpoint, data).pipe(
       catchError(this.handleError<DataForm>('getData', data))
     ).subscribe();
+  }
+
+  report(): void {
+    let headers = new HttpHeaders();
+    headers = headers.set('Accept', 'application/pdf');
+    this.http.get(this.reportEndpoint, { headers: headers, responseType: 'blob' }).subscribe(response => this.downLoadFile(response, 'application/pdf'));
+  }
+
+  downLoadFile(data: any, type: string) {
+    let blob = new Blob([data], { type: type });
+    let url = window.URL.createObjectURL(blob);
+    let pwa = window.open(url);
+    if (!pwa || pwa.closed || typeof pwa.closed == 'undefined') {
+      alert('Please disable your Pop-up blocker and try again.');
+    }
   }
 
   /**

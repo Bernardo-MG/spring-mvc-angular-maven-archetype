@@ -15,11 +15,13 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataViewModule } from './data-view/data-view.module';
 import { DataFormModule } from './data-form/data-form.module';
+import { DataReportComponent } from './data-report/data-report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    DataReportComponent
   ],
   imports: [
     AppRoutingModule,
