@@ -4,6 +4,7 @@ import { ApiResponse } from './api-response';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { DataForm } from './dataForm';
 
 @Injectable({
   providedIn: 'root'
@@ -20,10 +21,16 @@ export class DataService {
     const params = { query };
     return this.http.get<ApiResponse<Data[]>>(this.endpoint, { params: params }).pipe(
       map((response: ApiResponse<Data[]>) => { return response.content.content }),
-      catchError(this.handleError<Data[]>('getData', []))
+      catchError(this.handleError<Data[]>('search', []))
     ).pipe(
-      catchError(this.handleError<Data[]>('getData', []))
+      catchError(this.handleError<Data[]>('search', []))
     );
+  }
+
+  save(data: DataForm): void {
+    this.http.post<DataForm>(this.endpoint, data).pipe(
+      catchError(this.handleError<DataForm>('getData', data))
+    ).subscribe();
   }
 
   /**

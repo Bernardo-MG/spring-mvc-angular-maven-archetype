@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataViewModule } from './data-view/data-view.module';
+import { DataFormModule } from './data-form/data-form.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DataViewModule } from './data-view/data-view.module';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-    DataViewModule
+    DataViewModule,
+    DataFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
