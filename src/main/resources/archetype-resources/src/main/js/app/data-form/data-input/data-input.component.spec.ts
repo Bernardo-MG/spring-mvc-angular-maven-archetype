@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DataInputComponent } from './data-input.component';
@@ -8,6 +9,7 @@ describe('DataInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ DataInputComponent ]
     })
     .compileComponents();

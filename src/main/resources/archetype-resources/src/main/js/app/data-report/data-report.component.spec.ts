@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DataReportComponent } from './data-report.component';
@@ -8,6 +9,7 @@ describe('DataReportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ DataReportComponent ]
     })
     .compileComponents();

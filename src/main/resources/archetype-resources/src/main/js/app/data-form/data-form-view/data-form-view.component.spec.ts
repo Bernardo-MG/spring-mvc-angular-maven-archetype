@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DataFormViewComponent } from './data-form-view.component';
@@ -8,6 +9,7 @@ describe('DataFormViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ DataFormViewComponent ]
     })
     .compileComponents();
