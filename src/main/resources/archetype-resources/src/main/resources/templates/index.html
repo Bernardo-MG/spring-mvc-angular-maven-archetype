@@ -6,6 +6,9 @@
 
    <title>@project.name@</title>
 
+   <!-- Favicon -->
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
    <!-- Metadata -->
    <meta name="description" content="@project.description@" />
    <meta name="keywords" content="@view.keywords@">
@@ -25,20 +28,19 @@
    <meta name="twitter:description" content="@project.description@"/>
 
    <!-- CSS -->
-   <link rel="stylesheet" th:href="@{/static/css/index.css}">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
 <body>
 
    <noscript>Javascript should be enabled for this app to run</noscript>
+   <app-root></app-root>
 
-   <div id="root">
-      <div id="loader" class="loader"></div>
-   </div>
-
-   <script th:src="@{/static/vendor.js}"></script>
-   <script th:src="@{/static/app.js}"></script>
+   <script th:src="@{/static/runtime.js}" defer></script>
+   <script th:src="@{/static/polyfills.js}" defer></script>
+   <script th:src="@{/static/styles.js}" defer></script>
+   <script th:src="@{/static/vendor.js}" defer></script>
+   <script th:src="@{/static/main.js}" defer></script>
 
 </body>
 </html>

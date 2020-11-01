@@ -6,18 +6,22 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CharclassViewModule } from './charclass-view/charclass-view.module';
 import { NavigationComponent } from './navigation/navigation.component';
+import { DataViewModule } from './data-view/data-view.module';
+import { DataFormModule } from './data-form/data-form.module';
+import { DataReportComponent } from './data-report/data-report.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    DataReportComponent
   ],
   imports: [
     AppRoutingModule,
@@ -25,11 +29,13 @@ import { NavigationComponent } from './navigation/navigation.component';
     HttpClientModule,
     BrowserAnimationsModule,
     LayoutModule,
-    CharclassViewModule,
     MatButtonModule,
     MatIconModule,
+    MatListModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    DataViewModule,
+    DataFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

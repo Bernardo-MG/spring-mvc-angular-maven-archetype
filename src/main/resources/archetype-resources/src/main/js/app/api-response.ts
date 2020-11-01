@@ -1,4 +1,6 @@
+import { ApiPage } from './api-page';
+
 export interface ApiResponse<T> {
-    count: number;
-    results: T;
+    content: ApiPage<T>;
+    status: T;
 }

@@ -1,19 +1,19 @@
 {
-   "name": "test",
-   "version": "0.0.1-SNAPSHOT",
-   "description": "A Spring MVC project using React+Redux for the views.",
-   "author": "Bernardo Martínez Garrido",
-   "homepage": "https://github.com/bernardo-mg/test",
+   "name": "${artifactId}",
+   "version": "${version}",
+   "description": "${projectDescription}",
+   "author": "${developerName}",
+   "homepage": "https://github.com/${repoUserId}/${artifactId}",
    "license": "MIT",
    "keywords": [
-      "keywords"
+      ${keywords}
    ],
    "repository": {
       "type": "git",
-      "url": "git@github.com:bernardo-mg/test.git"
+      "url": "git@github.com:${repoUserId}/${artifactId}.git"
    },
    "bugs": {
-      "url": "https://www.github.com/bernardo-mg/test/issues"
+      "url": "https://www.github.com/${repoUserId}/${artifactId}/issues"
    },
    "scripts": {
       "ng": "ng",

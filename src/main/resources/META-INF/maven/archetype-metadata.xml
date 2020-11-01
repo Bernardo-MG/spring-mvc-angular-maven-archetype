@@ -57,8 +57,11 @@
          <directory>src/main/js</directory>
          <includes>
             <include>**/*.js</include>
-            <include>**/*.scss</include>
             <include>**/*.json</include>
+            <include>**/*.sass</include>
+            <include>**/*.ts</include>
+            <include>**/*.html</include>
+            <include>**/*.gitkeep</include>
          </includes>
       </fileSet>
       <fileSet filtered="false" encoding="UTF-8">
@@ -166,6 +169,7 @@
          <!-- Frontend project files -->
          <directory></directory>
          <includes>
+            <include>angular.json</include>
             <include>package.json</include>
          </includes>
       </fileSet>
@@ -173,10 +177,10 @@
          <!-- Frontend files -->
          <directory></directory>
          <includes>
-            <include>webpack.*.js</include>
-            <include>.babelrc</include>
-            <include>.eslintrc</include>
-            <include>.nvmrc</include>
+            <include>.browserslistrc</include>
+            <include>.editorconfig</include>
+            <include>karma.conf.js</include>
+            <include>tslint.json</include>
          </includes>
       </fileSet>
    </fileSets>

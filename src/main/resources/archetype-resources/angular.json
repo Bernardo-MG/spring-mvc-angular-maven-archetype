@@ -3,15 +3,15 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dnd5-api-angular-client": {
+    "${artifactId}": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
         }
       },
-      "root": "",
-      "sourceRoot": "src/main/js",
+      "root": "src/main/js",
+      "sourceRoot": ".",
       "prefix": "app",
       "architect": {
         "build": {
@@ -21,7 +21,7 @@
             "index": "src/main/js/index.html",
             "main": "src/main/js/main.ts",
             "polyfills": "src/main/js/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "src/main/js/tsconfig.app.json",
             "aot": true,
             "assets": [
               "src/main/js/assets"
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dnd5-api-angular-client:build"
+            "browserTarget": "${artifactId}:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dnd5-api-angular-client:build:production"
+              "browserTarget": "${artifactId}:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dnd5-api-angular-client:build"
+            "browserTarget": "${artifactId}:build"
           }
         },
         "test": {
@@ -85,7 +85,7 @@
           "options": {
             "main": "src/main/js/test.ts",
             "polyfills": "src/main/js/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "src/main/js/tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/main/js/assets"
@@ -98,7 +98,7 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dnd5-api-angular-client:serve:production"
+              "devServerTarget": "${artifactId}:serve:production"
             },
             "ci": {
               "watch": false,
@@ -111,8 +111,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
+              "src/main/js/tsconfig.app.json",
+              "src/main/js/tsconfig.spec.json",
               "src/main/js/e2e/tsconfig.json"
             ],
             "exclude": [
@@ -124,14 +124,14 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "src/main/js/e2e/protractor.conf.js",
-            "devServerTarget": "dnd5-api-angular-client:serve"
+            "devServerTarget": "${artifactId}:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dnd5-api-angular-client:serve:production"
+              "devServerTarget": "${artifactId}:serve:production"
             },
             "ci": {
-              "devServerTarget": "dnd5-api-angular-client:serve:production",
+              "devServerTarget": "${artifactId}:serve:production",
               "protractorConfig": "src/main/js/e2e/protractor-ci.conf.js"
             }
           }
@@ -139,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "dnd5-api-angular-client"
+  "defaultProject": "${artifactId}"
 }
