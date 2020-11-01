@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 
 import { DataListComponent } from './data-list/data-list.component';
@@ -20,12 +22,16 @@ import { DataViewSearchFormComponent } from './data-view-search-form/data-view-s
     CommonModule,
     RouterModule,
     FlexLayoutModule,
+    MatButtonModule,
+    MatInputModule,
     MatListModule
   ],
   exports: [
     CommonModule,
     RouterModule,
     FlexLayoutModule,
+    MatButtonModule,
+    MatInputModule,
     MatListModule,
     DataListComponent
   ]
