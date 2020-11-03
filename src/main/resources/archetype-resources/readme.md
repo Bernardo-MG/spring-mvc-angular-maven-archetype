@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 ${symbol_pound} ${projectName}
 
-This is a [Spring MVC](https://spring.io) project using [React](https://reactjs.org/) templates for the frontend, created with the use of the [Spring MVC with React Maven Archetype](https://github.com/Bernardo-MG/spring-mvc-react-maven-archetype). It will ease the development of new Spring MVC projects, setting it up for CI through the use of three free services: [Github](https://github.com/), [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) and [Bintray](https://bintray.com/).
+This is a [Spring MVC](https://spring.io) project using [Angular](https://angular.io/) templates for the frontend, created with the use of the [Spring MVC with Angular Maven Archetype](https://github.com/Bernardo-MG/spring-mvc-angular-maven-archetype). It will ease the development of new Spring MVC projects, setting it up for CI through the use of three free services: [Github](https://github.com/), [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows) and [Bintray](https://bintray.com/).
 
 Before beginning with the new project there are a few things which should be edited:
 
@@ -29,7 +29,7 @@ The project by default comes with a useful series of features:
 - Preconfigured POM to begin developing a new [Spring MVC](https://spring.io) project with [Spring Boot}(https://spring.io/projects/spring-boot).
 - Initial sample project including working persistence and exception handling
 - Integration with [Thymeleaf](http://www.thymeleaf.org/) for the view templates.
-- Using [React](https://reactjs.org/) for the UI.
+- Using [Angular](https://angular.io/) for the UI.
 - Using [Liquibase](http://www.liquibase.org/) for database versioning.
 - Integration with [iText](https://itextpdf.com/) for generating PDFs.
 - Prepared for [Github Workflow](https://docs.github.com/en/actions/configuring-and-managing-workflows), including configuration files and deployment scripts. Check the [Archetype documentation](http://docs.bernardomg.com/maven/library-maven-archetype) to find out more.
