@@ -5,9 +5,17 @@
       <author email="programming@bernardomg.com">Bernardo Martínez Garrido</author>
    </properties>
    <body>
-      <release version="1.0.0" date="2018-09-04" description="First release">
+      <release version="1.0.0" date="2020-09-04" description="First release">
          <action dev="bmg" type="update">
             First release of the archetype.
+         </action>
+      </release>
+      <release version="1.0.1" date="2020-11-01" description="Updates">
+         <action dev="bmg" type="update">
+            Updated POM.
+         </action>
+         <action dev="bmg" type="fix">
+            Corrected docs.
          </action>
       </release>
    </body>
