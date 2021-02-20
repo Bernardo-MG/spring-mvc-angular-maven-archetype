@@ -18,5 +18,10 @@
             Corrected docs.
          </action>
       </release>
+      <release version="1.0.2" date="2020-02-20" description="Corrected Maven Skin">
+         <action dev="bmg" type="fix">
+            Updated Maven skin after finding a breaking bug.
+         </action>
+      </release>
    </body>
 </document>
