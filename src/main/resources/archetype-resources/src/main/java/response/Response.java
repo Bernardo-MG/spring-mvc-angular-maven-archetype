@@ -22,11 +22,9 @@
  * SOFTWARE.
  */
 
-package $
+package ${package}.response;
 
 import com.bernardomg.example.solar.response.ResponseStatus;
-
-{package}.response;
 
 /**
  * Response to the frontend.
