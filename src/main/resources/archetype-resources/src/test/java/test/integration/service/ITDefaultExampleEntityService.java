@@ -78,7 +78,7 @@ public class ITDefaultExampleEntityService {
 
         finalEntitiesCount = Iterables.size(service.getAllEntities());
 
-        Assertions.assertEquals(finalEntitiesCount, new Integer(entitiesCount + 1));
+        Assertions.assertEquals(finalEntitiesCount, Integer.valueOf(entitiesCount + 1));
     }
 
     /**
@@ -106,7 +106,7 @@ public class ITDefaultExampleEntityService {
 
         entity = service.findById(1);
 
-        Assertions.assertEquals(entity.getId(), new Integer(1));
+        Assertions.assertEquals(entity.getId(), Integer.valueOf(1));
     }
 
     /**
@@ -119,7 +119,7 @@ public class ITDefaultExampleEntityService {
 
         entity = service.findById(100);
 
-        Assertions.assertEquals(entity.getId(), new Integer(-1));
+        Assertions.assertEquals(entity.getId(), Integer.valueOf(-1));
     }
 
     /**
